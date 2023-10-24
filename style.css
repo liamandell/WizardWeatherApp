@@ -1,9 +1,16 @@
+.background{
+    background-color: #063067;
+}
 #header {
-    background-color: #6580ba;
-    height: 100px;
+    background-color: #77ebd0;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    color: #FFFFFF;
+    background-image: url('/Users/liamandell/Desktop/Liam-Portfolio/IMG_0060.jpg');
+
 }
 
 #search-form {
