@@ -67,7 +67,7 @@ searchBtn.addEventListener("click", function() {
                         document.getElementById("current-card-title").innerHTML = `${iconurl} ${data.main.temp}°F`;
                         document.getElementById("current-card-text").innerHTML = `Wind Speed: ${data.wind.speed}MPH, Humidity: ${data.main.humidity}%`;
                     })
-                    // Future Day Cards
+                    // this is Future Day Cards
                 let futureAPIURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
                 fetch(futureAPIURL)
                     .then(function (response) {
@@ -92,7 +92,7 @@ searchBtn.addEventListener("click", function() {
                             let cardText = document.querySelector(cardTextArray[i]);
                             let cardHeader = document.querySelector(cardHeaderArray[i]);
                         
-                            // Check if the elements were found before updating them
+                            
                             if (cardTitleEl && cardText) {
                                 cardHeader.innerText = `${data.city.name} (${futureDate.getMonth() + 1}/${futureDate.getDate()}/${futureDate.getFullYear()})`;
                                 cardTitleEl.innerHTML = `${futureIconURL} ${futureTemp}°F`;
